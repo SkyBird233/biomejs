@@ -11,7 +11,7 @@ env:
 jobs:
   version:
     name: Generate version
-    runs-on: depot-ubuntu-24.04-arm
+    runs-on: ubuntu-24.04
     outputs:
       version: ${{ env.version }}
     steps:
@@ -44,7 +44,7 @@ jobs:
           - os: depot-macos-14
             target: aarch64-apple-darwin
             code-target: darwin-arm64
-          - os: depot-ubuntu-24.04-16
+          - os: ubuntu-24.04
             target: loongarch64-unknown-linux-gnu
             code-target: linux-loong64
             cross: true
